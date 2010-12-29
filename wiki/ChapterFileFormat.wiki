@@ -21,4 +21,4 @@ Where:
 || `mark` || If not defined will use 0 sec. || Chapter starting time in human readable HH:MM:SS, MM:SS format or in seconds ||
 || `title` || required || Chapter Title ||
 || `title2` || optional || Additional description about Chapter, for example "Recorded Date Time" from Camcoder DVD ||
-|| `thumb` || required || Thumbnail image which you'll see in menu if not blank. ||
+|| `thumb` || required || Relative path from chapter file path to thumbnail image file which you'll see in menu if not blank. ||
