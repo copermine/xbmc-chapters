@@ -1,0 +1,24 @@
+# Detailed Description of Chapter File Format in xbmc-chapters
+
+= Introduction =
+
+XBMC-Chapter is using Custom XML Files and SVCD txt format for chapter listing.
+
+= XML Chapters =
+
+Sample XML Chapter file should look something like this:
+
+{{{
+<chapters>
+    <chapter mark="0" title="Chapter 1" title2="Description for chapter 1" thumb="image1.jpg" />
+    <chapter mark="10:3" title="Chapter 2" title2="Description 2" thumb="picture.jpg" />
+    <chapter mark="128" title="Chapter 3" title2="Another Description" thumb="picture.tbn" />
+</chapters>
+}}}
+
+Where:
+|| *attibute* || *is required* || *description* ||
+|| `mark` || If not defined will use 0 sec. || Chapter starting time in human readable HH:MM:SS, MM:SS format or in seconds ||
+|| `title` || required || Chapter Title ||
+|| `title2` || optional || Additional description about Chapter, for example "Recorded Date Time" from Camcoder DVD ||
+|| `thumb` || required || Thumbnail image which you'll see in menu if not blank. ||
