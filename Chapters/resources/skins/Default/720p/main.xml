@@ -1,0 +1,395 @@
+<window id="20000">
+    <!-- defaultcontrol>50</defaultcontrol -->
+    <!--views>30050,30051</views-->
+    <allowoverlay>no</allowoverlay>
+    <coordinates>
+        <system>1</system>
+        <posx>0</posx>
+        <posy>0</posy>
+    </coordinates>
+    <animation effect="fade" time="250">WindowOpen</animation>
+    <animation effect="fade" time="250">WindowClose</animation>
+    <controls>
+        <control type="group">
+            <!-- Fake Labels -->
+            <control type="label" id="30001">
+                <posx>-2000</posx>
+                <posy>-2000</posy>
+                <label>-</label>
+                <width>10</width>
+                <height>10</height>
+            </control>
+            <control type="label" id="30002">
+                <posx>-20000</posx>
+                <posy>-2000</posy>
+                <label>-</label>
+                <width>100</width>
+                <height>10</height>
+            </control>
+            
+            <!-- Regular Controls -->
+            <control type="group">
+                <visible>!substring(Control.GetLabel(30002),label2) + !substring(Control.GetLabel(30001),thumb)</visible>
+                <posx>560</posx>
+                <posy>100</posy>
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>620</width>
+                    <height>500</height>
+                    <texture border="40,30,35,30">panel-default.png</texture>
+                </control>
+                <control type="label" id="30010">
+                    <posx>40</posx>
+                    <posy>20</posy>
+                    <label>32020</label>
+                    <width>400</width>
+                    <height>48</height>
+                    <font>font18</font>
+                    <aligny>center</aligny>
+                    <textcolor>white</textcolor>
+                    <align>left</align>
+                </control>
+                <control type="list" id="30050">
+                    <posx>40</posx>
+                    <posy>70</posy>
+                    <width>540</width>
+                    <height>390</height>
+                    <onleft>30052</onleft>
+                    <onright>30012</onright>
+                    <viewtype label="537">list</viewtype>
+                    <pagecontrol>30012</pagecontrol>
+                    <scrolltime>200</scrolltime>
+                    <itemlayout height="38">
+                        <control type="label">
+                            <posx>10</posx>
+                            <posy>0</posy>
+                            <width>480</width>
+                            <height>38</height>
+                            <font>font18</font>
+                            <aligny>center</aligny>
+                            <textcolor>white</textcolor>
+                            <selectedcolor>green</selectedcolor>
+                            <align>left</align>
+                            <info>ListItem.Label</info>
+                        </control>          
+
+                        <control type="label">
+                            <posx>520</posx>
+                            <posy>0</posy>
+                            <width>80</width>
+                            <height>38</height>
+                            <font>font18</font>
+                            <aligny>center</aligny>
+                            <textcolor>white</textcolor>
+                            <selectedcolor>green</selectedcolor>
+                            <align>right</align>
+                            <info>ListItem.property(chaptermarkhuman)</info>
+                        </control>
+
+                    </itemlayout>
+                    <focusedlayout height="38">
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>540</width>
+                            <height>38</height>
+                            <texture border="4">item-focus.png</texture>
+                        </control>
+                        <control type="label">
+                            <posx>10</posx>
+                            <posy>0</posy>
+                            <width>480</width>
+                            <height>38</height>
+                            <font>font18</font>
+                            <aligny>center</aligny>
+                            <textcolor>white</textcolor>
+                            <selectedcolor>green</selectedcolor>
+                            <align>left</align>
+                            <info>ListItem.Label</info>
+                        </control>          
+
+                        <control type="label">
+                            <posx>520</posx>
+                            <posy>0</posy>
+                            <width>80</width>
+                            <height>38</height>
+                            <font>font18</font>
+                            <aligny>center</aligny>
+                            <textcolor>white</textcolor>
+                            <selectedcolor>green</selectedcolor>
+                            <align>right</align>
+                            <info>ListItem.property(chaptermarkhuman)</info>
+                        </control>
+                    </focusedlayout>
+                </control>
+            </control>
+            
+            
+            
+            <!-- Control for Label2 -->
+            <control type="group">
+                <visible>substring(Control.GetLabel(30002),label2) + !substring(Control.GetLabel(30001),thumb)</visible>
+
+                <posx>560</posx>
+                <posy>100</posy>
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>620</width>
+                    <height>500</height>
+                    <texture border="40,30,35,30">panel-default.png</texture>
+                </control>
+                <control type="label" id="30010">
+                    <posx>40</posx>
+                    <posy>20</posy>
+                    <label>32020</label>
+                    <width>400</width>
+                    <height>48</height>
+                    <font>font18</font>
+                    <aligny>center</aligny>
+                    <textcolor>white</textcolor>
+                    <align>left</align>
+                </control>
+                
+                <control type="list" id="30051">
+
+                    <posx>40</posx>
+                    <posy>70</posy>
+                    <width>540</width>
+                    <height>390</height>
+                    <onleft>30050</onleft>
+                    <onright>30012</onright>
+                    <onup>51</onup>
+                    <ondown>51</ondown>
+                    <pagecontrol>30012</pagecontrol>
+                    <scrolltime>200</scrolltime>
+                    <viewtype label="list2">list</viewtype>
+                    <itemlayout height="58">
+                        <control type="label">
+                            <posx>10</posx>
+                            <posy>0</posy>
+                            <width>480</width>
+                            <height>35</height>
+                            <font>font18</font>
+                            <aligny>center</aligny>
+                            <textcolor>white</textcolor>
+                            <selectedcolor>green</selectedcolor>
+                            <align>left</align>
+                            <info>ListItem.Label</info>
+                        </control>    
+                        <control type="label">
+                            <posx>10</posx>
+                            <posy>30</posy>
+                            <width>480</width>
+                            <height>20</height>
+                            <font>font16</font>
+                            <aligny>center</aligny>
+                            <textcolor>FFCCCCCC</textcolor>
+                            <align>left</align>
+                            <info>ListItem.Label2</info>
+                        </control>               
+                        <control type="label">
+                            <posx>520</posx>
+                            <posy>0</posy>
+                            <width>80</width>
+                            <height>38</height>
+                            <font>font18</font>
+                            <aligny>center</aligny>
+                            <textcolor>white</textcolor>
+                            <selectedcolor>green</selectedcolor>
+                            <align>right</align>
+                            <info>ListItem.property(chaptermarkhuman)</info>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="58">
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>540</width>
+                            <height>58</height>
+                            <texture border="4">item-focus.png</texture>
+                        </control>
+                        <control type="label">
+                            <posx>10</posx>
+                            <posy>0</posy>
+                            <width>480</width>
+                            <height>35</height>
+                            <font>font18</font>
+                            <aligny>center</aligny>
+                            <textcolor>white</textcolor>
+                            <selectedcolor>green</selectedcolor>
+                            <align>left</align>
+                            <info>ListItem.Label</info>
+                        </control>    
+                        <control type="label">
+                            <posx>10</posx>
+                            <posy>30</posy>
+                            <width>480</width>
+                            <height>20</height>
+                            <font>font16</font>
+                            <aligny>center</aligny>
+                            <textcolor>FFCCCCCC</textcolor>
+                            <align>left</align>
+                            <info>ListItem.Label2</info>
+                        </control>           
+                        <control type="label">
+                            <posx>520</posx>
+                            <posy>0</posy>
+                            <width>80</width>
+                            <height>38</height>
+                            <font>font18</font>
+                            <aligny>center</aligny>
+                            <textcolor>white</textcolor>
+                            <selectedcolor>green</selectedcolor>
+                            <align>right</align>
+                            <info>ListItem.property(chaptermarkhuman)</info>
+                        </control>
+                    </focusedlayout>
+                </control>
+
+            </control>
+
+            <!-- Control for Thumbs -->
+            <control type="group">
+                <visible>substring(Control.GetLabel(30001),thumb)</visible>
+                <posx>100</posx>
+                <posy>100</posy>
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>1080</width>
+                    <height>500</height>
+                    <texture border="40,30,35,30">panel-default.png</texture>
+                </control>
+                <control type="label" id="30010">
+                    <posx>40</posx>
+                    <posy>20</posy>
+                    <label>32020</label>
+                    <width>400</width>
+                    <height>40</height>
+                    <font>font18</font>
+                    <aligny>center</aligny>
+                    <textcolor>white</textcolor>
+                    <align>left</align>
+                </control>
+                
+
+                <control type="panel" id="30052">
+
+                    <posx>40</posx>
+                    <posy>70</posy>
+                    <width>1000</width>
+                    <height>390</height>
+                    <onleft>30051</onleft>
+                    <onright>30012</onright>
+                    <onup>30052</onup>
+                    <ondown>30052</ondown>
+                    <pagecontrol>30012</pagecontrol>
+                    <scrolltime>200</scrolltime>
+                    <viewtype label="list3">list</viewtype>
+                    <itemlayout height="200" width="250">
+                        <control type="label">
+                            <posx>10r</posx>
+                            <posy>0</posy>
+                            <width>210</width>
+                            <height>20</height>
+                            <font>font12</font>
+                            <aligny>top</aligny>
+                            <textcolor>white</textcolor>
+                            <selectedcolor>green</selectedcolor>
+                            <align>right</align>
+                            <info>ListItem.property(chaptermarkhuman)</info>
+                        </control>
+                        <control type="image">
+                            <posx>10</posx>
+                            <posy>20</posy>
+                            <width>230</width>
+                            <height>140</height>
+                            <texture>$INFO[ListItem.Thumb]</texture>
+                            <info>Listitem.Thumb</info>
+                        </control>
+                        <control type="label">
+                            <posx>115</posx>
+                            <posy>165</posy>
+                            <width>230</width>
+                            <height>22</height>
+                            <font>font14</font>
+                            <aligny>center</aligny>
+                            <textcolor>white</textcolor>
+                            <selectedcolor>green</selectedcolor>
+                            <align>center</align>
+                            <info>ListItem.Label</info>
+                        </control>
+                        
+                    </itemlayout>
+                    <focusedlayout height="200" width="250">
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>250</width>
+                            <height>190</height>
+                            <texture border="4">item-focus.png</texture>
+                        </control>
+                        <control type="label">
+                            <posx>10r</posx>
+                            <posy>0</posy>
+                            <width>250</width>
+                            <height>20</height>
+                            <font>font12</font>
+                            <aligny>top</aligny>
+                            <textcolor>white</textcolor>
+                            <selectedcolor>green</selectedcolor>
+                            <align>right</align>
+                            <info>ListItem.property(chaptermarkhuman)</info>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>20</posy>
+                            <width>250</width>
+                            <height>140</height>
+                            <texture>$INFO[ListItem.Thumb]</texture>
+                            <info>Listitem.Thumb</info>
+                        </control>
+                        <control type="label">
+                            <posx>125</posx>
+                            <posy>165</posy>
+                            <width>250</width>
+                            <height>22</height>
+                            <font>font14</font>
+                            <aligny>center</aligny>
+                            <textcolor>white</textcolor>
+                            <selectedcolor>green</selectedcolor>
+                            <align>center</align>
+                            <info>ListItem.Label</info>
+                        </control>
+                    </focusedlayout>
+                </control>
+
+            </control>
+      
+      
+            <control type="group">
+                <posx>1150</posx>
+                <posy>170</posy>
+                <control type="scrollbar" id="30012">
+                    <description>scroll bar indicator for lists</description>
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>4</width>
+                    <height>390</height>
+                    <onleft>30050</onleft>
+                    <onright>30050</onright>
+                    <texturesliderbackground border="0,4,0,4">-</texturesliderbackground>
+                    <texturesliderbar border="0,4,0,4">ScrollBarV_bar.png</texturesliderbar>
+                    <texturesliderbarfocus border="0,4,0,4">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                    <textureslidernib>ScrollBarNib.png</textureslidernib>
+                    <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+                    <orientation>vertical</orientation>
+                    <showonepage>false</showonepage>
+                    <visible>Control.IsVisible(30050) | Control.IsVisible(30051) | Control.IsVisible(30052)</visible>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>
